@@ -1,6 +1,7 @@
 package com.example.prueba;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -145,5 +146,23 @@ public class MainActivity extends AppCompatActivity {
         et4.setText("");
 
         Toast.makeText(this,"Se limpiaron los campos de registro", Toast.LENGTH_LONG).show();
+    }
+
+    public void BTNfactura(View view) {
+        Intent myIntent =new Intent(MainActivity.this, facturas.class);
+        startActivity(myIntent);
+    }
+
+    public void BTNreporte(View view) {
+        Intent myIntent =new Intent(MainActivity.this, reportes.class);
+        startActivity(myIntent);
+    }
+    public void BTNstock(View view) {
+        Intent myIntent =new Intent(MainActivity.this, stock.class);
+        startActivity(myIntent);
+    }
+    public void BTNmovimientos(View view) {
+        Intent myIntent =new Intent(MainActivity.this, movimientos.class);
+        startActivity(myIntent);
     }
 }
